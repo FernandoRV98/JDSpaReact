@@ -12,7 +12,7 @@ import {
 } from './NavbarElements'
 import MenuIcon from '@mui/icons-material/Menu';
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <>
       <Nav>
@@ -20,7 +20,7 @@ const Navbar = () => {
           <NavLogo to='/'>
             <img src="./jdspalogo.png" width={100} />
           </NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <MenuIcon fontSize='large'/>
           </MobileIcon>
           <NavMenu>
@@ -38,7 +38,7 @@ const Navbar = () => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-              <NavBtnLink to='/signin'>SignIn</NavBtnLink>
+              <NavBtnLink to='/signin'>Sign In</NavBtnLink>
             </NavBtn>
         </NavbarContainer>
       </Nav>
