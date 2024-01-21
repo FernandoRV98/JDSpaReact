@@ -1,7 +1,9 @@
-// Components/HomeSection/ControlledCarousel.js
 import {useState, useEffect} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import {getAdvertisements} from "./getAdvertisements";
+import { CarouselItem, CarouselImage } from './HomeElements.js';
+import Button from '@mui/material/Button';
+import GetAppIcon from '@mui/icons-material/GetApp';
 
 function ControlledCarousel() {
     const [index, setIndex] = useState(0);
@@ -23,21 +25,21 @@ function ControlledCarousel() {
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
             {advertisements.map((ad, idx) => (
-                <Carousel.Item key={idx}>
-                    <img
+                <CarouselItem key={idx}>
+                    <CarouselImage
                         src={ad.img}
                         alt={`Slide ${idx + 1}`}
-                        style={{
-                            width: '100%',
-                            height: '80vh', // Limitar la altura de las imágenes
-                            objectFit: 'cover'
-                        }}
                     />
-                    <Carousel.Caption>
-                        <h3>{`Slide label ${idx + 1}`}</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                    <Button variant="outlined" style={{position: 'absolute', left: '20px', bottom: '50%', transform: 'translateY(50%)', zIndex: 2}}>
+                        Conoce nuestros servicios
+                    </Button>
+                    <Button
+                        variant="contained"
+                        endIcon={<GetAppIcon />}
+                        style={{position: 'absolute', left: '20px', bottom: '40%', transform: 'translateY(50%)', zIndex: 2, marginTop: '10px'}}>
+                        Descarga la aplicación
+                    </Button>
+                </CarouselItem>
             ))}
         </Carousel>
     );
