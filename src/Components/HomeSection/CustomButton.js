@@ -1,13 +1,13 @@
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 
-const CustomButton = styled(Button)(({ theme }) => ({
-    color: theme.palette.getContrastText('#D6A3B2'),
-    backgroundColor: '#D6A3B2',
+const CustomButton = styled(Button)({
+    color: '#fff',
+    backgroundColor: '#99475f',
     fontFamily:'Open Sans',
     '&:hover': {
-        backgroundColor: '#B5838D',
+        backgroundColor: '#ef909e',
     },
-}));
+});
 
 export default CustomButton;

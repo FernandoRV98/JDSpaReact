@@ -43,7 +43,8 @@ export const HomeH1 = styled.h1`
     color: #fff;
     font-size: 48px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     @media screen and (max-width: 768px){
         font-size: 40px;
     }
@@ -57,7 +58,8 @@ export const HomeP = styled.p`
     color: #fff;
     font-size: 24px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     max-width: 600px;
     @media screen and (max-width: 768px){
         font-size: 24px;

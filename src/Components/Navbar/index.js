@@ -1,16 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { NavLinks } from './NavbarElements'
 import {
     Nav,
     NavbarContainer,
     NavLogo,
     MobileIcon,
     NavMenu,
-    NavItem,
-    NavLinks
+    NavItem
 } from './NavbarElements'
 import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = ({toggle}) => {
+    const [activeLink, setActiveLink] = useState('home');
+
+    const handleSetActive = (to) => {
+        setActiveLink(to);
+    }
+
+    const handleSetInactive = () => {
+        setActiveLink('');
+    }
+
     return (
         <>
             <Nav>
@@ -23,16 +33,16 @@ const Navbar = ({toggle}) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to='home'>Inicio</NavLinks>
+                            <NavLinks to='home' smooth={true} duration={500} spy={true} exact='true' offset={-80} onSetActive={handleSetActive} onSetInactive={handleSetInactive} className={activeLink === 'home' ? 'activeLink' : ''}>Inicio</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='massage'>Masajes</NavLinks>
+                            <NavLinks to='massageSection' smooth={true} duration={500} spy={true} exact='true' offset={-80} onSetActive={handleSetActive} onSetInactive={handleSetInactive} className={activeLink === 'massageSection' ? 'activeLink' : ''}>Masajes</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='products'>Productos</NavLinks>
+                            <NavLinks to='products' smooth={true} duration={500} spy={true} exact='true' offset={-80} onSetActive={handleSetActive} onSetInactive={handleSetInactive} className={activeLink === 'products' ? 'activeLink' : ''}>Productos</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='contact'>Contacto</NavLinks>
+                            <NavLinks to='contact' smooth={true} duration={500} spy={true} exact='true' offset={-80} onSetActive={handleSetActive} onSetInactive={handleSetInactive} className={activeLink === 'contact' ? 'activeLink' : ''}>Contacto</NavLinks>
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>
