@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar'
 import HomeSection from "../Components/HomeSection";
 import Footer from "../Components/Footer";
 import Experiences from "../Components/MassageSection/experiences";
+import Contact from "../Components/Contact";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -21,6 +22,7 @@ const Home = () => {
             <Element name="massageSection" style={{ marginTop: '50px', marginBottom: '50px', marginLeft: '50px', marginRight: '50px' }}>
                 <Experiences/>
             </Element>
+            <Contact/>
             <Footer/>
         </>
     )
