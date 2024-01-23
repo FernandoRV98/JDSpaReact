@@ -23,11 +23,10 @@ const Footer = () => {
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
+                            <FooterLinkTitle>Acerca de nosotros</FooterLinkTitle>
                             <FooterLink to='/'>How it works</FooterLink>
                             <FooterLink to='/'>Testimonials</FooterLink>
                             <FooterLink to='/'>Careers</FooterLink>
-                            <FooterLink to='/'>Investors</FooterLink>
                             <FooterLink to='/'>Terms of Service</FooterLink>
                         </FooterLinkItems>
                         <FooterLinkItems>
@@ -40,7 +39,7 @@ const Footer = () => {
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Social Media</FooterLinkTitle>
+                            <FooterLinkTitle>Redes Sociales</FooterLinkTitle>
                             <FooterLink to='/'>Instagram</FooterLink>
                             <FooterLink to='/'>Facebook</FooterLink>
                             <FooterLink to='/'>Whatsapp</FooterLink>
