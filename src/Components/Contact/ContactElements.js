@@ -13,7 +13,7 @@ export const ContactContainer = styled.div`
 export const ContactWrapper = styled.div`
     display:grid;
     z-index:1;
-    height:860px;
+    height:650px;
     width:100%;
     max-width:1100px;
     margin-right:auto;
@@ -96,12 +96,6 @@ export const MapContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -250px; // Ajusta esto al margen superior que desees
-`;
-export const PageContainer = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: -50px; // Ajusta esto al margen superior que desees
+    margin-bottom: 50px; // Agrega un margen debajo del mapa
 `;
