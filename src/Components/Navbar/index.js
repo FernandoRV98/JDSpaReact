@@ -9,7 +9,7 @@ import {
     NavItem
 } from './NavbarElements'
 import MenuIcon from '@mui/icons-material/Menu';
-
+import logo from '../../images/jdspalogo.png';
 const Navbar = ({toggle}) => {
     const [activeLink, setActiveLink] = useState('home');
 
@@ -26,7 +26,7 @@ const Navbar = ({toggle}) => {
             <Nav>
                 <NavbarContainer>
                     <NavLogo to='/'>
-                        <img src="./jdspalogo.png" width={100}/>
+                        <img src={logo} width={100}/>
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <MenuIcon fontSize='large'/>
