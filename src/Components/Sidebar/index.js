@@ -9,10 +9,10 @@ export const Sidebar = ({isOpen, toggle}) => {
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to='about' onClick={toggle}>About</SidebarLink>
-            <SidebarLink to='services' onClick={toggle}>Services</SidebarLink>
-            <SidebarLink to='contact' onClick={toggle}>Contact</SidebarLink>
-            <SidebarLink to='signup' onClick={toggle}>Sign Up</SidebarLink>
+            <SidebarLink to='home' onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Inicio</SidebarLink>
+            <SidebarLink to='massageSection' onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Masajes</SidebarLink>
+            <SidebarLink to='products' onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Productos</SidebarLink>
+            <SidebarLink to='contact' onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Contacto</SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
             <SidebarRoute to='/signin'>Sign In</SidebarRoute>

@@ -1,13 +1,13 @@
-
 import React from 'react';
 import styled from 'styled-components';
 
-const CardContainer = styled.div`
+const SectionContainer = styled.section`
     display: flex;
-    border: 1px solid #ccc;
+    flex-direction: ${props => props.direction};
+    justify-content: flex-start; // Modificar esto para ajustar el espacio entre el texto y la imagen
+    align-items: center;
     padding: 20px;
-    margin: 20px;
-    width: 600px;
+    width: 100%;
 `;
 
 const TextContainer = styled.div`
@@ -15,22 +15,22 @@ const TextContainer = styled.div`
 `;
 
 const CardTitle = styled.h2`
-    font-size: 20px;
+    font-size: 30px; // Aumentar esto para hacer el título más grande
     color: #333;
 `;
 
 const CardSubtitle = styled.h3`
-    font-size: 16px;
+    font-size: 24px; // Aumentar esto para hacer el subtítulo más grande
     color: #666;
 `;
 
 const CardInfo = styled.p`
-    font-size: 14px;
+    font-size: 18px; // Aumentar esto para hacer el texto de información más grande
     color: #999;
 `;
 
 const ImageContainer = styled.div`
-    width: 50%;
+    width: ${props => props.imageSize};
 `;
 
 const CardImage = styled.img`
@@ -38,18 +38,18 @@ const CardImage = styled.img`
     height: auto;
 `;
 
-const InfoCard = ({ title, subtitle, info, image }) => {
+const InfoCard = ({ title, subtitle, info, image, direction, imageSize }) => {
     return (
-        <CardContainer>
+        <SectionContainer direction={direction}>
             <TextContainer>
                 <CardTitle>{title}</CardTitle>
                 <CardSubtitle>{subtitle}</CardSubtitle>
                 <CardInfo>{info}</CardInfo>
             </TextContainer>
-            <ImageContainer>
+            <ImageContainer imageSize={imageSize}>
                 <CardImage src={image} alt={title} />
             </ImageContainer>
-        </CardContainer>
+        </SectionContainer>
     );
 };
 

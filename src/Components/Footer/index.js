@@ -1,19 +1,22 @@
 import React from 'react';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import {
     FooterContainer,
     FooterWrap,
     FooterLinksContainer,
     FooterLinksWrapper,
     FooterLinkItems,
-    FooterLinkTitle,
-    FooterLink,
-    SocialMedia,
-    SocialMediaWrap,
-    SocialLogo,
-    SocialIcon,
     WebsiteRights,
     SocialIcons,
-    SocialIconLink
+    SocialIconLink,
+    SpaName,
+    SpaAddress,
+    SpaWhatsApp,
+    SpaEmail,
+    ServicesTitle,
+    ServiceItem
 } from './FooterElements';
 
 const Footer = () => {
@@ -23,55 +26,43 @@ const Footer = () => {
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Acerca de nosotros</FooterLinkTitle>
-                            <FooterLink to='/'>How it works</FooterLink>
-                            <FooterLink to='/'>Testimonials</FooterLink>
-                            <FooterLink to='/'>Careers</FooterLink>
-                            <FooterLink to='/'>Terms of Service</FooterLink>
+                            <SpaName>JD SPA</SpaName>
+                            <SpaAddress>Dirección del SPA</SpaAddress>
+                            <SpaWhatsApp>WhatsApp del SPA</SpaWhatsApp>
+                            <SpaEmail>Correo electrónico del SPA</SpaEmail>
                         </FooterLinkItems>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Contactanos</FooterLinkTitle>
-                            <FooterLink to='/'>Contact</FooterLink>
-                            <FooterLink to='/'>Support</FooterLink>
-                            <FooterLink to='/'>Destinations</FooterLink>
-                            <FooterLink to='/'>Sponsorships</FooterLink>
+                            <ServicesTitle>Servicios</ServicesTitle>
+                            <ServiceItem>Masajes faciales</ServiceItem>
+                            <ServiceItem>Masajes corporales</ServiceItem>
+                            <ServiceItem>Productos</ServiceItem>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <ServicesTitle>Horario de atención</ServicesTitle>
+                            <ServiceItem>Lunes a viernes: 9:00 a 19:00</ServiceItem>
+                            <ServiceItem>Sábados: 9:00 a 14:00</ServiceItem>
+                            <ServiceItem>Domingos: Cerrado</ServiceItem>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Redes Sociales</FooterLinkTitle>
-                            <FooterLink to='/'>Instagram</FooterLink>
-                            <FooterLink to='/'>Facebook</FooterLink>
-                            <FooterLink to='/'>Whatsapp</FooterLink>
+                            <WebsiteRights>JD SPA © 2024. Todos los derechos reservados.</WebsiteRights>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <SocialIcons>
+                                <SocialIconLink href="//www.whatsapp.com" target="_blank" aria-label="WhatsApp">
+                                    <WhatsAppIcon />
+                                </SocialIconLink>
+                                <SocialIconLink href="//www.facebook.com" target="_blank" aria-label="Facebook">
+                                    <FacebookIcon />
+                                </SocialIconLink>
+                                <SocialIconLink href="//www.instagram.com" target="_blank" aria-label="Instagram">
+                                    <InstagramIcon />
+                                </SocialIconLink>
+                            </SocialIcons>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
-                <SocialMedia>
-                    <SocialMediaWrap>
-                        <SocialLogo to='/'>
-                            <SocialIcon/>
-                            JD SPA
-                        </SocialLogo>
-                        <WebsiteRights>JD SPA © 2024</WebsiteRights>
-                        {/*<SocialIcons>
-                            <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
-                                <FaFacebook />
-                            </SocialIconLink>
-                            <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
-                                <FaInstagram />
-                            </SocialIconLink>
-                            <SocialIconLink href='/' target='_blank' aria-label='Youtube'>
-                                <FaYoutube />
-                            </SocialIconLink>
-                            <SocialIconLink href='/' target='_blank' aria-label='Twitter'>
-                                <FaTwitter />
-                            </SocialIconLink>
-                            <SocialIconLink href='/' target='_blank' aria-label='LinkedIn'>
-                                <FaLinkedin />
-                            </SocialIconLink>
-                        </SocialIcons>*/}
-                    </SocialMediaWrap>
-                </SocialMedia>
             </FooterWrap>
         </FooterContainer>
     );

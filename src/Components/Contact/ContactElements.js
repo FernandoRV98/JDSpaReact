@@ -27,8 +27,9 @@ export const ContactRow = styled.div`
     grid-auto-columns:minmax(auto,1fr);
     align-items:center;
     grid-template-areas:'col2 col1';
+
     @media screen and (max-width:768px){
-        grid-template-areas:'col1 col1' 'col2 col2';
+        grid-template-areas:'col2' 'col1'; // Cambiar el orden aquí
     }
 `;
 
@@ -91,11 +92,12 @@ export const Img = styled.img`
 `;
 
 export const MapContainer = styled.div`
-    width: 100%;
-    height: 400px; // Ajusta esto a la altura que desees para el mapa
+    width: 95%; // Ajusta esto al ancho que desees para el mapa
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px; // Ajusta esto al margen superior que desees
-    margin-bottom: 50px; // Agrega un margen debajo del mapa
+    margin: 0 auto; // Centra el mapa horizontalmente
+    margin-top: -50px;
+    margin-bottom: 50px;
 `;

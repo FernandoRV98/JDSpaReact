@@ -1,19 +1,26 @@
-
 import React from 'react';
 import InfoCard from './InfoCard';
-import Data from './Data';
+import styled from 'styled-components';
 
-const InfoSection = () => {
+const CardContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+`;
+
+const InfoSection = ({ data }) => {
     return (
         <div>
-            {Data.map((data, index) => (
-                <InfoCard
-                    key={data.id}
-                    title={data.title}
-                    subtitle={data.subtitle}
-                    info={data.info}
-                    image={data.image}
-                />
+            {data.map((data) => (
+                <CardContainer key={data.id}>
+                    <InfoCard
+                        title={data.title}
+                        subtitle={data.subtitle}
+                        info={data.info}
+                        image={data.image}
+                        direction={data.direction}
+                    />
+                </CardContainer>
             ))}
         </div>
     );
