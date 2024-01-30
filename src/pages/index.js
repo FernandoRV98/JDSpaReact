@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar'
 import HomeSection from "../Components/HomeSection";
 import Footer from "../Components/Footer";
 import Experiences from "../Components/MassageSection/experiences";
+import Products from "../Components/ProductSection/experiences";
 import Contact from "../Components/Contact";
 import { ScrollTopButton } from "./PageElements";
 import InfoSection from "../Components/InfoSection";
@@ -46,7 +47,9 @@ const Home = () => {
                  style={{marginTop: '50px', marginBottom: '50px', marginLeft: '50px', marginRight: '50px'}}>
             <Experiences/>
             <InfoSection data={[objectTwo]}/>
+            <Products/>
         </Element>
+        
         <Contact/>
         <Footer/>
         <ScrollTopButton show={showScroll}
