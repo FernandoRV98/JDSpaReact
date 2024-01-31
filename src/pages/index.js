@@ -47,9 +47,11 @@ const Home = () => {
                  style={{marginTop: '50px', marginBottom: '50px', marginLeft: '50px', marginRight: '50px'}}>
             <Experiences/>
             <InfoSection data={[objectTwo]}/>
-            <Products/>
         </Element>
-        
+        <Element name="products"
+                    style={{marginTop: '50px', marginBottom: '50px', marginLeft: '50px', marginRight: '50px'}}>
+                <Products/>
+        </Element>
         <Contact/>
         <Footer/>
         <ScrollTopButton show={showScroll}
