@@ -27,9 +27,9 @@ const Footer = () => {
                     <FooterLinksWrapper>
                         <FooterLinkItems>
                             <SpaName>JD SPA</SpaName>
-                            <SpaAddress>Dirección del SPA</SpaAddress>
-                            <SpaWhatsApp>WhatsApp del SPA</SpaWhatsApp>
-                            <SpaEmail>Correo electrónico del SPA</SpaEmail>
+                            <SpaAddress><b>Dirección:</b> Miguel E. Schultz 6, San Rafael, Alcaldía Cuauhtémoc, C.P 06470,
+                                CDMX</SpaAddress>
+                            <SpaWhatsApp><b>WhatsApp:</b> 5523797688</SpaWhatsApp>
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <ServicesTitle>Servicios</ServicesTitle>
@@ -50,14 +50,16 @@ const Footer = () => {
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <SocialIcons>
-                                <SocialIconLink href="//www.whatsapp.com" target="_blank" aria-label="WhatsApp">
-                                    <WhatsAppIcon />
+                                <SocialIconLink
+                                    href="https://wa.me/5523797688?text=Hola%20quisiera%20más%20información%20sobre%20los%20servicios"
+                                    target="_blank" aria-label="WhatsApp">
+                                    <WhatsAppIcon/>
                                 </SocialIconLink>
                                 <SocialIconLink href="//www.facebook.com" target="_blank" aria-label="Facebook">
-                                    <FacebookIcon />
+                                    <FacebookIcon/>
                                 </SocialIconLink>
                                 <SocialIconLink href="//www.instagram.com" target="_blank" aria-label="Instagram">
-                                    <InstagramIcon />
+                                    <InstagramIcon/>
                                 </SocialIconLink>
                             </SocialIcons>
                         </FooterLinkItems>
